@@ -87,7 +87,7 @@ const Home: NextPage = () => {
 
     },
     visible: {
-      height: "350px",
+      height: "300px",
       opacity: 1,
       boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1 }
@@ -133,7 +133,7 @@ const Home: NextPage = () => {
             { showImage && <motion.div
               variants={ picAnimation }
               onAnimationComplete={ () => setShowContent(true) }
-              className="relative h-[150px] md:h-[350px] w-[100%] md:w-[100%]">
+              className="relative w-[100%] md:w-[70%]">
               <Image src='https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' alt='image-1' layout='fill' className="rounded-md object-cover" />
             </motion.div> }
             <div className="py-8  ">
