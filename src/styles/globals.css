@@ -12,10 +12,5 @@
         font-style: normal;
         font-display: swap;
     }
-
-
-    .letter-blend{
-        mix-blend-mode: difference;
-    }
 }
 

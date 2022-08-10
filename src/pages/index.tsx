@@ -2,12 +2,14 @@ import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 
 
 const Home: NextPage = () => {
   const [showContent, setShowContent] = useState<boolean>(false)
+  const [showImage, setShowImage] = useState<boolean>(false)
 
 
 
@@ -62,11 +64,23 @@ const Home: NextPage = () => {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 3 }
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2 }
+    }
+  }
+  const rightAnimation = {
+    hidden: {
+      x: "2%",
+      opacity: 0,
+
+    },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2 }
     }
   }
 
-  const rightAnimation = {
+  const picAnimation = {
     hidden: {
       height: '0px',
       opacity: 0,
@@ -93,7 +107,7 @@ const Home: NextPage = () => {
 
 
         } }
-        onAnimationComplete={ () => setShowContent(true) }
+        onAnimationComplete={ () => setShowImage(true) }
         className="absolute bg-black h-screen w-full ">
 
       </motion.div>
@@ -104,7 +118,7 @@ const Home: NextPage = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className="py-12">
+        <main className="py-12 select-none">
 
 
 
@@ -115,22 +129,20 @@ const Home: NextPage = () => {
             variants={ container }
 
           >
-
-
-
-            { showContent && <motion.div
-              variants={ rightAnimation }
+            { showImage && <motion.div
+              variants={ picAnimation }
+              onAnimationComplete={ () => setShowContent(true) }
               className="relative h-[150px] md:h-[300px] w-[100%] md:w-[600px]">
-              <Image src='https://images.unsplash.com/photo-1521702813222-1943f3fb9c07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' alt='image-1' layout='fill' className="rounded-md object-cover" />
+              <Image src='https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' alt='image-1' layout='fill' className="rounded-md object-cover" />
             </motion.div> }
             <div className="py-8  ">
-              <span className="text-4xl ">👋</span>
+              <motion.div variants={ rightAnimation } className="text-2xl animate-wiggle w-min ">👋</motion.div>
               <div className="overflow-hidden bg-white ">
 
                 { words.flat().map((element, index) => {
                   return (
                     <motion.span
-                      className='text-3xl md:text-9xl font-cal mt-3 text-white mix-blend-difference transition duration-500 '
+                      className='text-3xl md:text-7xl font-cal mt-3 text-white mix-blend-difference transition duration-500 '
                       style={ { display: "inline-block" } }
                       variants={ item }
 
@@ -143,18 +155,25 @@ const Home: NextPage = () => {
                 <div>
                   <motion.p
                     variants={ leftAnimation }
-                    className="text-gray-400 text-base font-light w-[90%] mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque esse excepturi incidunt sequi quaerat asperiores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque esse excepturi incidunt sequi quaerat asperiores?</motion.p>
+                    className="text-gray-400 text-base font-light w-[90%] my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque esse excepturi incidunt sequi quaerat asperiores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque esse excepturi incidunt sequi quaerat asperiores?</motion.p>
 
+                  <motion.div
+                    variants={ rightAnimation }
+                  >
+                    <Link href='/' >
+                      < a >
+                        <div className='flex items-center space-x-1 hover:underline'>
+                          See more →
+                        </div>
+                      </ a>
+                    </Link >
+                  </motion.div>
 
                 </div>
-
               }
             </div>
           </motion.section>
         </main >
-
-
-
       </div >
     </div >
 
