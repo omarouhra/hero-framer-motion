@@ -112,14 +112,14 @@ const Home: NextPage = () => {
         className="absolute bg-black h-screen w-full ">
 
       </motion.div>
-      <div className="mx-auto max-w-6xl py-12 px-5 ">
+      <div className="mx-auto max-w-6xl py-4 md:py-12 px-5 ">
         <Head>
           <title>Omar Portfolio</title>
           <meta name="description" content="Portfolio animation with framer motion 🚀" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className="py-12 select-none">
+        <main className="py-2 md:py-12 select-none">
 
 
 
