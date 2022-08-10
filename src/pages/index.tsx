@@ -64,7 +64,7 @@ const Home: NextPage = () => {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2 }
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: .5 }
     }
   }
   const rightAnimation = {
@@ -76,7 +76,7 @@ const Home: NextPage = () => {
     visible: {
       x: 0,
       opacity: 1,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 2 }
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: .5 }
     }
   }
 
@@ -87,9 +87,10 @@ const Home: NextPage = () => {
 
     },
     visible: {
-      height: "300px",
+      height: "350px",
       opacity: 1,
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.5 }
+      boxShadow: "rgba(17, 12, 46, 0.15) 0px 48px 100px 0px",
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1 }
     }
   }
 
@@ -132,7 +133,7 @@ const Home: NextPage = () => {
             { showImage && <motion.div
               variants={ picAnimation }
               onAnimationComplete={ () => setShowContent(true) }
-              className="relative h-[150px] md:h-[300px] w-[100%] md:w-[600px]">
+              className="relative h-[150px] md:h-[350px] w-[100%] md:w-[100%]">
               <Image src='https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' alt='image-1' layout='fill' className="rounded-md object-cover" />
             </motion.div> }
             <div className="py-8  ">
@@ -155,12 +156,12 @@ const Home: NextPage = () => {
                 <div>
                   <motion.p
                     variants={ leftAnimation }
-                    className="text-gray-400 text-base font-light w-[90%] my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque esse excepturi incidunt sequi quaerat asperiores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque esse excepturi incidunt sequi quaerat asperiores?</motion.p>
+                    className="text-gray-400 text-base font-light md:w-[70%] my-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque esse excepturi incidunt sequi quaerat asperiores? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque esse excepturi incidunt sequi quaerat asperiores?</motion.p>
 
                   <motion.div
                     variants={ rightAnimation }
                   >
-                    <Link href='/' >
+                    <Link href='' >
                       < a >
                         <div className='flex items-center space-x-1 hover:underline'>
                           See more →
