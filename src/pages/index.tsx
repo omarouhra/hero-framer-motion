@@ -120,7 +120,7 @@ const Home: NextPage = () => {
 
             { showContent && <motion.div
               variants={ rightAnimation }
-              className="relative h-[300px] w-[600px]">
+              className="relative h-[300px] w-[100%] md:w-[600px]">
               <Image src='https://images.unsplash.com/photo-1521702813222-1943f3fb9c07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' alt='image-1' layout='fill' className="rounded-md object-cover" />
             </motion.div> }
             <div className="py-8  ">
