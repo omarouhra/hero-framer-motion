@@ -14,6 +14,8 @@ function AnimatedLetters({ title }: letterType) {
     const splitWords = title.split(" ");
 
 
+
+
     // splite words to letters
     const words = splitWords.map(word => {
         return word.split('')
@@ -27,14 +29,15 @@ function AnimatedLetters({ title }: letterType) {
 
 
 
+
+
     return (
         <div className="overflow-hidden bg-white ">
 
             { words.flat().map((element, index) => {
                 return (
                     <motion.span
-                        className='text-3xl md:text-7xl font-cal mt-3 text-white mix-blend-difference transition duration-500 '
-                        style={ { display: "inline-block" } }
+                        className='inline-block text-3xl md:text-7xl font-cal mt-3 text-white mix-blend-difference transition duration-500'
                         variants={ Animations.letter }
                         key={ index }>{ element }</motion.span>
                 )

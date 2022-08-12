@@ -33,7 +33,7 @@ const Home: NextPage = () => {
       </motion.div>
 
       <div className="mx-auto max-w-6xl py-4 md:py-12 px-5 ">
-        
+
         <Head>
           <title>Omar Portfolio</title>
           <meta name="description" content="Portfolio animation with framer motion 🚀" />
@@ -44,11 +44,9 @@ const Home: NextPage = () => {
           <motion.section
             initial="hidden"
             animate="visible"
-            variants={ Animations.container}
-
           >
 
-            {/* Picture */}
+            {/* Picture */ }
             { showImage && <motion.div
               variants={ Animations.picture }
               onAnimationComplete={ () => setShowContent(true) }
@@ -59,10 +57,14 @@ const Home: NextPage = () => {
             <div className="py-8  ">
               <motion.div variants={ Animations.FadeRight } className="text-2xl animate-wiggle w-min ">👋</motion.div>
 
-              {/* Animated Letters */}
-              <AnimatedLetters title="Hi, I'm Omar" />
+              {/* Animated Letters */ }
+              <motion.div
+                variants={ Animations.container }
+              >
+                <AnimatedLetters title="Hi, I'm Omar" />
+              </motion.div>
 
-              {/* Content */}
+              {/* Content */ }
               { showContent &&
                 <div>
                   <motion.p

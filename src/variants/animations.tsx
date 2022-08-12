@@ -16,7 +16,7 @@ export const Animations = {
     container: {
         visible: {
             transition: {
-                staggerChildren: 0.08,
+                staggerChildren:0.08,
             }
         }
     },
