@@ -8,7 +8,7 @@ module.exports = {
       },
 
       keyframes: {
-        wiggle: {
+        wave: {
           "0%, 100%": {
             transform: "translateX(0%)",
           },
@@ -18,7 +18,7 @@ module.exports = {
         },
       },
       animation: {
-        wiggle: "wiggle 3s infinite both",
+        wave: "wave 3s infinite both",
       },
     },
   },
