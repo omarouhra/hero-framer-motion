@@ -9,7 +9,7 @@
 
 
 ------------------------
-- Tutorial: [Youtube Link](https://www.youtube.com/channel/UCfivvAsq399l0oKLHOapRnw)
+- Tutorial: [Youtube Link](https://www.youtube.com/watch?v=_H-FCO7CrA8&ab_channel=OmarOuhra)
 
 - Preview: [Vercel Link](https://hero-framer-motion.vercel.app/)
 ------------------------
