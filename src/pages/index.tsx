@@ -55,7 +55,7 @@ const Home: NextPage = () => {
             </motion.div> }
 
             <div className="py-8  ">
-              <motion.div variants={ Animations.FadeRight } className="text-2xl animate-wiggle w-min ">👋</motion.div>
+              <motion.div variants={ Animations.FadeRight } className="text-2xl animate-wave w-min ">👋</motion.div>
 
               {/* Animated Letters */ }
               <motion.div
