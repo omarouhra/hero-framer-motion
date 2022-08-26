@@ -95,8 +95,8 @@ const Home: NextPage = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
               { PROJECTS.map(({ name, content, link }, index) => (
                 <div key={ index } className='p-4  bg-gray-50 border rounded-lg shadow hover:shadow-2xl'>
-                  <h3 className="font-cal text-2xl mb-4">{ name }</h3>
-                  <div className="w-full h-[200px] rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 mb-6 shadow-lg"> </div>
+                  <h3 className="font-cal text-2xl mb-4 text-blue-500">{ name }</h3>
+                  {/* <div className="w-full h-[200px] rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 mb-6 shadow-lg"> </div> */ }
                   <p className="text-sm text-gray-400 font-light mb-4">{ content }</p>
                   <Link href={ link }>
                     <a target='_blank' className="hover:underline hover:text-blue-500">Check the project</a>
